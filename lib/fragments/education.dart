@@ -11,7 +11,7 @@ class EducationFragment extends StatelessWidget {
         title: new Text("Education"),
       ),
       body: new Text(
-         "Madhu"
+         "Education"
       )
     );
   }

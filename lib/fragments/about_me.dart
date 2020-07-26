@@ -93,29 +93,7 @@ class AboutMeFragment extends StatelessWidget {
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: Icon(
-                                Icons.bubble_chart,
-                                color: Colors.red[800],
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                "Skills",
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  color: Colors.red[800],
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'RobotoSlab',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        CardHeader("Skills", Icons.bubble_chart),
                         Row(
                           children: [
                             Container(
@@ -355,29 +333,7 @@ class AboutMeFragment extends StatelessWidget {
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: Icon(
-                                Icons.bubble_chart,
-                                color: Colors.red[800],
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                "Skills",
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  color: Colors.red[800],
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'RobotoSlab',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        CardHeader("Skills", Icons.bubble_chart),
                         Container(
                           child: Row(
                             children: [
@@ -728,11 +684,3 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 }
-
-// LayoutBuilder(builder: (context, constraints) {
-//               if (constraints.maxWidth < 500) {
-//                 return null;
-//               } else {
-//                 return null;
-//               }
-//             }),

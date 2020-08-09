@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutMeFragment extends StatelessWidget {
   Widget CardHeader(cardTitle, iconName) {
@@ -80,23 +81,37 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 
-  Widget socialMediaProfile(fileName) {
+  Widget socialMediaProfile(fileName, url) {
     return Expanded(
       child: Column(
         children: [
           Row(
             children: [
-              GestureDetector(),
-              Image.asset(
-                "images/socialmedia/" + fileName,
-                height: 50,
-                width: 50,
+              GestureDetector(
+                onTap: () => {_launchURL(url)},
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Image.asset(
+                    "images/socialmedia/" +
+                        fileName, // On click should redirect to an URL
+                    width: 40,
+                    height: 40,
+                  ),
+                ),
               )
             ],
           )
         ],
       ),
     );
+  }
+
+  _launchURL(url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -253,7 +268,7 @@ class AboutMeFragment extends StatelessWidget {
                   children: [
                     CardHeader("Social Media Profiles", Icons.bubble_chart),
                     LayoutBuilder(builder: (context, constraints) {
-                      if (constraints.maxWidth < 375) {
+                      if (constraints.maxWidth < 500) {
                         return Column(
                           children: [
                             Container(
@@ -261,9 +276,14 @@ class AboutMeFragment extends StatelessWidget {
                                   left: 32, right: 20, top: 20, bottom: 10),
                               child: Row(
                                 children: [
-                                  socialMediaProfile("linkedIn.png"),
-                                  socialMediaProfile("stackoverflow.png"),
-                                  socialMediaProfile("github.png"),
+                                  socialMediaProfile("linkedIn.png",
+                                      "https://www.linkedin.com/in/madhujayarama/"),
+                                  socialMediaProfile("googleplaystore.png",
+                                      "https://play.google.com/store/apps/dev?id=8807932952586006668"),
+                                  socialMediaProfile("stackoverflow.png",
+                                      "https://stackoverflow.com/users/5935759/madhu-jayarama"),
+                                  socialMediaProfile("github.png",
+                                      "https://github.com/madhujgowda"),
                                 ],
                               ),
                             ),
@@ -272,9 +292,12 @@ class AboutMeFragment extends StatelessWidget {
                                   left: 32, right: 20, top: 20, bottom: 10),
                               child: Row(
                                 children: [
-                                  socialMediaProfile("instagram.png"),
-                                  socialMediaProfile("facebook.png"),
-                                  socialMediaProfile("twitter.png"),
+                                  socialMediaProfile("instagram.png",
+                                      "https://www.instagram.com/madhugowda123/"),
+                                  socialMediaProfile("facebook.png",
+                                      "https://www.facebook.com/madhujgowdaofficial"),
+                                  socialMediaProfile("twitter.png",
+                                      "https://twitter.com/madhugowdaj"),
                                 ],
                               ),
                             )
@@ -286,12 +309,20 @@ class AboutMeFragment extends StatelessWidget {
                               left: 32, right: 20, top: 20, bottom: 10),
                           child: Row(
                             children: [
-                              socialMediaProfile("linkedIn.png"),
-                              socialMediaProfile("stackoverflow.png"),
-                              socialMediaProfile("github.png"),
-                              socialMediaProfile("instagram.png"),
-                              socialMediaProfile("facebook.png"),
-                              socialMediaProfile("twitter.png"),
+                              socialMediaProfile("linkedIn.png",
+                                  "https://www.linkedin.com/in/madhujayarama/"),
+                              socialMediaProfile("googleplaystore.png",
+                                  "https://play.google.com/store/apps/dev?id=8807932952586006668"),
+                              socialMediaProfile("stackoverflow.png",
+                                  "https://stackoverflow.com/users/5935759/madhu-jayarama"),
+                              socialMediaProfile("github.png",
+                                  "https://github.com/madhujgowda"),
+                              socialMediaProfile("instagram.png",
+                                  "https://www.instagram.com/madhugowda123/"),
+                              socialMediaProfile("facebook.png",
+                                  "https://www.facebook.com/madhujgowdaofficial"),
+                              socialMediaProfile("twitter.png",
+                                  "https://twitter.com/madhugowdaj"),
                             ],
                           ),
                         );
@@ -308,13 +339,3 @@ class AboutMeFragment extends StatelessWidget {
   }
 }
 
-//Row(
-//children: [
-//socialMediaProfile("linkedIn.png"),
-//socialMediaProfile("stackoverflow.png"),
-//socialMediaProfile("github.png"),
-//socialMediaProfile("instagram.png"),
-//socialMediaProfile("facebook.png"),
-//socialMediaProfile("twitter.png"),
-//],
-//),

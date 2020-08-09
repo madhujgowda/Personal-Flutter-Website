@@ -105,6 +105,20 @@ class HomePageState extends State<HomePage> {
     }
   }
 
+  Widget MenuItemList(icon, menuTitle, index) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(
+        menuTitle,
+        style: TextStyle(
+          fontFamily: 'RobotoSlab',
+        ),
+      ),
+      selected: index == _selectedDrawerIndex,
+      onTap: () => _onSelectItem(index),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var drawer = Drawer(
@@ -123,72 +137,12 @@ class HomePageState extends State<HomePage> {
               child: Text(""),
             ),
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text(
-              'About Me',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 1 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(1),
-          ),
-          ListTile(
-            leading: Icon(Icons.work),
-            title: Text(
-              'Work Experience',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 2 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(2),
-          ),
-          ListTile(
-            leading: Icon(Icons.school),
-            title: Text(
-              'Education',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 3 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(3),
-          ),
-          ListTile(
-            leading: Icon(Icons.developer_board),
-            title: Text(
-              'Projects',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 4 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(4),
-          ),
-          ListTile(
-            leading: Icon(Icons.collections_bookmark),
-            title: Text(
-              'Certificates',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 5 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(5),
-          ),
-          ListTile(
-            leading: Icon(Icons.directions_run),
-            title: Text(
-              'Extra Curriculars',
-              style: TextStyle(
-                fontFamily: 'RobotoSlab',
-              ),
-            ),
-            selected: 6 == _selectedDrawerIndex,
-            onTap: () => _onSelectItem(6),
-          ),
+          MenuItemList(Icons.person, 'About Me', 1),
+          MenuItemList(Icons.work, 'Work Experience', 2),
+          MenuItemList(Icons.school, 'Education', 3),
+          MenuItemList(Icons.developer_board, 'Projects', 4),
+          MenuItemList(Icons.collections_bookmark, 'Certificates', 5),
+          MenuItemList(Icons.directions_run, 'Extra Curriculars', 6),
         ],
       ),
     );

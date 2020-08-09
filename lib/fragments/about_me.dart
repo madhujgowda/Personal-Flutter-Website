@@ -13,15 +13,66 @@ class AboutMeFragment extends StatelessWidget {
             color: Colors.red[800],
           ),
         ),
-        Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            cardTitle,
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.red[800],
-              fontWeight: FontWeight.bold,
-              fontFamily: 'RobotoSlab',
+        Container(
+          child: Flexible(
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                cardTitle,
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.red[800],
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'RobotoSlab',
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget SkillHeader(fieldHeader) {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.only(top: 10, left: 32),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              fieldHeader + ":",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black87,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'RobotoSlab',
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget SkillBody(fieldBody) {
+    return Row(
+      children: [
+        Container(
+          child: Flexible(
+            child: Container(
+              padding: const EdgeInsets.only(top: 10, left: 32),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  fieldBody,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black87,
+                    fontFamily: 'RobotoSlab',
+                  ),
+                ),
+              ),
             ),
           ),
         ),
@@ -35,6 +86,7 @@ class AboutMeFragment extends StatelessWidget {
         children: [
           Row(
             children: [
+              GestureDetector(),
               Image.asset(
                 "images/socialmedia/" + fileName,
                 height: 50,
@@ -94,233 +146,18 @@ class AboutMeFragment extends StatelessWidget {
                     child: Column(
                       children: [
                         CardHeader("Skills", Icons.bubble_chart),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Front End:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Angular, Flutter, Bootstrap",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black87,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Back End:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "CakePHP, Spring Boot, Node.js",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black87,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Mobile:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Android",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black87,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Database:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              child: Flexible(
-                                child: Container(
-                                  padding:
-                                      const EdgeInsets.only(top: 10, left: 32),
-                                  child: Align(
-                                    alignment: Alignment.topLeft,
-                                    child: Text(
-                                      "MySQL, MS SQL Server, MongoDB, Firebase",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.black87,
-                                        fontFamily: 'RobotoSlab',
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Build Tools:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Maven, Gradle",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black87,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Version Control:",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 10, left: 32),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Git",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black87,
-                                    fontFamily: 'RobotoSlab',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        SkillHeader("Front End"),
+                        SkillBody("Angular, Flutter, Bootstrap"),
+                        SkillHeader("Back End"),
+                        SkillBody("CakePHP, Spring Boot, Node.js"),
+                        SkillHeader("Mobile"),
+                        SkillBody("Android"),
+                        SkillHeader("Database"),
+                        SkillBody("MySQL, MS SQL Server, MongoDB, Firebase"),
+                        SkillHeader("Build Tools"),
+                        SkillBody("Maven, Gradle"),
+                        SkillHeader("Version Control"),
+                        SkillBody("Git"),
                       ],
                     ),
                   ),
@@ -340,98 +177,16 @@ class AboutMeFragment extends StatelessWidget {
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Front End:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "Angular, Flutter, Bootstrap",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Front End"),
+                                    SkillBody("Angular, Flutter, Bootstrap"),
                                   ],
                                 ),
                               ),
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Back End:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "CakePHP, Spring Boot, Node.js",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Back End"),
+                                    SkillBody("CakePHP, Spring Boot, Node.js"),
                                   ],
                                 ),
                               ),
@@ -444,98 +199,17 @@ class AboutMeFragment extends StatelessWidget {
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Mobile:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "Android",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Mobile"),
+                                    SkillBody("Android"),
                                   ],
                                 ),
                               ),
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Database:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "MySQL, MS SQL Server, MongoDB, Firebase",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Database"),
+                                    SkillBody(
+                                        "MySQL, MS SQL Server, MongoDB, Firebase"),
                                   ],
                                 ),
                               ),
@@ -548,98 +222,16 @@ class AboutMeFragment extends StatelessWidget {
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Build Tools:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "Maven, Gradle",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Build Tools"),
+                                    SkillBody("Maven, Gradle"),
                                   ],
                                 ),
                               ),
                               Expanded(
                                 child: Column(
                                   children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              top: 10, left: 32),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              "Version Control:",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'RobotoSlab',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          child: Flexible(
-                                            child: Container(
-                                              padding: const EdgeInsets.only(
-                                                  top: 10, left: 32),
-                                              child: Align(
-                                                alignment: Alignment.topLeft,
-                                                child: Text(
-                                                  "Git",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                    fontFamily: 'RobotoSlab',
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                    SkillHeader("Version Control"),
+                                    SkillBody("Git"),
                                   ],
                                 ),
                               ),
@@ -660,20 +252,51 @@ class AboutMeFragment extends StatelessWidget {
                 child: Column(
                   children: [
                     CardHeader("Social Media Profiles", Icons.bubble_chart),
-                    Container(
-                      padding: EdgeInsets.only(
-                          left: 32, right: 20, top: 20, bottom: 10),
-                      child: Row(
-                        children: [
-                          socialMediaProfile("linkedIn.png"),
-                          socialMediaProfile("stackoverflow.png"),
-                          socialMediaProfile("github.png"),
-                          socialMediaProfile("instagram.png"),
-                          socialMediaProfile("facebook.png"),
-                          socialMediaProfile("twitter.png"),
-                        ],
-                      ),
-                    ),
+                    LayoutBuilder(builder: (context, constraints) {
+                      if (constraints.maxWidth < 375) {
+                        return Column(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                  left: 32, right: 20, top: 20, bottom: 10),
+                              child: Row(
+                                children: [
+                                  socialMediaProfile("linkedIn.png"),
+                                  socialMediaProfile("stackoverflow.png"),
+                                  socialMediaProfile("github.png"),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(
+                                  left: 32, right: 20, top: 20, bottom: 10),
+                              child: Row(
+                                children: [
+                                  socialMediaProfile("instagram.png"),
+                                  socialMediaProfile("facebook.png"),
+                                  socialMediaProfile("twitter.png"),
+                                ],
+                              ),
+                            )
+                          ],
+                        );
+                      } else {
+                        return Container(
+                          padding: EdgeInsets.only(
+                              left: 32, right: 20, top: 20, bottom: 10),
+                          child: Row(
+                            children: [
+                              socialMediaProfile("linkedIn.png"),
+                              socialMediaProfile("stackoverflow.png"),
+                              socialMediaProfile("github.png"),
+                              socialMediaProfile("instagram.png"),
+                              socialMediaProfile("facebook.png"),
+                              socialMediaProfile("twitter.png"),
+                            ],
+                          ),
+                        );
+                      }
+                    }),
                   ],
                 ),
               ),
@@ -684,3 +307,14 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 }
+
+//Row(
+//children: [
+//socialMediaProfile("linkedIn.png"),
+//socialMediaProfile("stackoverflow.png"),
+//socialMediaProfile("github.png"),
+//socialMediaProfile("instagram.png"),
+//socialMediaProfile("facebook.png"),
+//socialMediaProfile("twitter.png"),
+//],
+//),

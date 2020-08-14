@@ -1,10 +1,8 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:Madhu/fragments/about_me.dart';
 import 'package:Madhu/fragments/work_experience.dart';
-import 'package:Madhu/fragments/education.dart';
+import 'package:Madhu/fragments/business.dart';
 import 'package:Madhu/fragments/projects.dart';
 import 'package:Madhu/fragments/certificates.dart';
 import 'package:Madhu/fragments/extra_curriculars.dart';
@@ -64,7 +62,7 @@ class HomePageState extends State<HomePage> {
       case 2:
         return new WorkExperienceFragment();
       case 3:
-        return new EducationFragment();
+        return new BusinessFragment();
       case 4:
         return new ProjectsFragment();
       case 5:
@@ -87,7 +85,7 @@ class HomePageState extends State<HomePage> {
           _appbarTitle = "Work Experience";
           break;
         case 3:
-          _appbarTitle = "Education";
+          _appbarTitle = "Business";
           break;
         case 4:
           _appbarTitle = "Projects";
@@ -105,7 +103,7 @@ class HomePageState extends State<HomePage> {
     }
   }
 
-  Widget MenuItemList(icon, menuTitle, index) {
+  Widget menuItemList(icon, menuTitle, index) {
     return ListTile(
       leading: Icon(icon),
       title: Text(
@@ -137,12 +135,12 @@ class HomePageState extends State<HomePage> {
               child: Text(""),
             ),
           ),
-          MenuItemList(Icons.person, 'About Me', 1),
-          MenuItemList(Icons.work, 'Work Experience', 2),
-          MenuItemList(Icons.school, 'Education', 3),
-          MenuItemList(Icons.developer_board, 'Projects', 4),
-          MenuItemList(Icons.collections_bookmark, 'Certificates', 5),
-          MenuItemList(Icons.directions_run, 'Extra Curriculars', 6),
+          menuItemList(Icons.person, 'About Me', 1),
+          menuItemList(Icons.work, 'Work Experience', 2),
+          menuItemList(Icons.work, 'Business', 3),
+          menuItemList(Icons.developer_board, 'Projects', 4),
+          menuItemList(Icons.collections_bookmark, 'Certificates', 5),
+          menuItemList(Icons.directions_run, 'Extra Curriculars', 6),
         ],
       ),
     );

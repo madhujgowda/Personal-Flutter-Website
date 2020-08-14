@@ -1,18 +1,12 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class ExtraCurricularsFragment extends StatelessWidget {
   @override
-  Widget build (BuildContext ctxt) {
+  Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Extra Curriculars"),
+        title: new Text("Website under build... Please check back later... "),
       ),
-      body: new Text(
-         "Madhu"
-      )
     );
   }
 }

@@ -1,10 +1,9 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutMeFragment extends StatelessWidget {
-  Widget CardHeader(cardTitle, iconName) {
+  Widget cardHeader(cardTitle, iconName) {
     return Row(
       children: [
         Container(
@@ -34,7 +33,7 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 
-  Widget SkillHeader(fieldHeader) {
+  Widget skillHeader(fieldHeader) {
     return Row(
       children: [
         Container(
@@ -56,7 +55,7 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 
-  Widget SkillBody(fieldBody) {
+  Widget skillBody(fieldBody) {
     return Row(
       children: [
         Container(
@@ -114,6 +113,92 @@ class AboutMeFragment extends StatelessWidget {
     }
   }
 
+  Widget educationCard(school, place, degree, fieldOfStudy, startYear, endYear) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Container(
+              child: Flexible(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 10, left: 32),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: [
+                        Text(
+                          school,
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'RobotoSlab',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              child: Flexible(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 10, left: 32),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: [
+                        Text(
+                          degree + " in " + fieldOfStudy,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black87,
+                            fontFamily: 'RobotoSlab',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              child: Flexible(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 10, left: 32),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: [
+                        Text(
+                          startYear + " - " + endYear,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black87,
+                            fontFamily: 'RobotoSlab',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext ctxt) {
     return new Scaffold(
@@ -151,114 +236,6 @@ class AboutMeFragment extends StatelessWidget {
                 ],
               ),
             ),
-            LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth < 500) {
-                return Card(
-                  margin: const EdgeInsets.only(
-                      left: 20, right: 20, top: 20, bottom: 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: [
-                        CardHeader("Skills", Icons.bubble_chart),
-                        SkillHeader("Front End"),
-                        SkillBody("Angular, Flutter, Bootstrap"),
-                        SkillHeader("Back End"),
-                        SkillBody("CakePHP, Spring Boot, Node.js"),
-                        SkillHeader("Mobile"),
-                        SkillBody("Android"),
-                        SkillHeader("Database"),
-                        SkillBody("MySQL, MS SQL Server, MongoDB, Firebase"),
-                        SkillHeader("Build Tools"),
-                        SkillBody("Maven, Gradle"),
-                        SkillHeader("Version Control"),
-                        SkillBody("Git"),
-                      ],
-                    ),
-                  ),
-                );
-              } else {
-                return Card(
-                  margin: const EdgeInsets.only(
-                      left: 20, right: 20, top: 20, bottom: 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: [
-                        CardHeader("Skills", Icons.bubble_chart),
-                        Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Front End"),
-                                    SkillBody("Angular, Flutter, Bootstrap"),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Back End"),
-                                    SkillBody("CakePHP, Spring Boot, Node.js"),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Mobile"),
-                                    SkillBody("Android"),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Database"),
-                                    SkillBody(
-                                        "MySQL, MS SQL Server, MongoDB, Firebase"),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Build Tools"),
-                                    SkillBody("Maven, Gradle"),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SkillHeader("Version Control"),
-                                    SkillBody("Git"),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              }
-            }),
             Card(
               margin: const EdgeInsets.only(
                   left: 20, right: 20, top: 20, bottom: 10),
@@ -266,7 +243,150 @@ class AboutMeFragment extends StatelessWidget {
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: [
-                    CardHeader("Social Media Profiles", Icons.bubble_chart),
+                    cardHeader("Skills", Icons.bubble_chart),
+                    LayoutBuilder(builder: (context, constraints) {
+                      if (constraints.maxWidth < 500) {
+                        return Container(
+                          child: Column(
+                            children: [
+                              skillHeader("Front End"),
+                              skillBody("Angular, Flutter, Bootstrap"),
+                              skillHeader("Back End"),
+                              skillBody("CakePHP, Spring Boot, Node.js"),
+                              skillHeader("Mobile"),
+                              skillBody("Android"),
+                              skillHeader("Database"),
+                              skillBody(
+                                  "MySQL, MS SQL Server, MongoDB, Firebase"),
+                              skillHeader("Build Tools"),
+                              skillBody("Maven, Gradle"),
+                              skillHeader("Version Control"),
+                              skillBody("Git"),
+                            ],
+                          ),
+                        );
+                      } else {
+                        return Container(
+                          child: Column(
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Front End"),
+                                          skillBody(
+                                              "Angular, Flutter, Bootstrap"),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Back End"),
+                                          skillBody(
+                                              "CakePHP, Spring Boot, Node.js"),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Mobile"),
+                                          skillBody("Android"),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Database"),
+                                          skillBody(
+                                              "MySQL, MS SQL Server, MongoDB, Firebase"),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Build Tools"),
+                                          skillBody("Maven, Gradle"),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          skillHeader("Version Control"),
+                                          skillBody("Git"),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }
+                    }),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.only(
+                  left: 20, right: 20, top: 20, bottom: 10),
+              child: Container(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  children: [
+                    cardHeader("Education", Icons.school),
+                    Container(
+                      child: Column(
+                        children: [
+                          educationCard(
+                              "Syracuse University",
+                              "Syracuse, NY",
+                              "Master of Science",
+                              "Computer Science",
+                              "2018",
+                              "2020"),
+                          educationCard(
+                              "Visvesvaraya Technological University",
+                              "Bengaluru, India",
+                              "Bachelor of Engineering",
+                              "Information Science",
+                              "2013",
+                              "2017"),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.only(
+                  left: 20, right: 20, top: 20, bottom: 10),
+              child: Container(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  children: [
+                    cardHeader("Social Media Profiles", Icons.person),
                     LayoutBuilder(builder: (context, constraints) {
                       if (constraints.maxWidth < 500) {
                         return Column(
@@ -338,4 +458,3 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 }
-

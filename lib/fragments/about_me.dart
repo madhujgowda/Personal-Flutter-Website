@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutMeFragment extends StatelessWidget {
+
   Widget cardHeader(cardTitle, iconName) {
     return Row(
       children: [
@@ -80,39 +81,6 @@ class AboutMeFragment extends StatelessWidget {
     );
   }
 
-  Widget socialMediaProfile(fileName, url) {
-    return Expanded(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () => {_launchURL(url)},
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Image.asset(
-                    "images/socialmedia/" +
-                        fileName, // On click should redirect to an URL
-                    width: 40,
-                    height: 40,
-                  ),
-                ),
-              )
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-  _launchURL(url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   Widget educationCard(school, place, degree, fieldOfStudy, startYear, endYear) {
     return Column(
       children: [
@@ -183,7 +151,8 @@ class AboutMeFragment extends StatelessWidget {
                           startYear + " - " + endYear,
                           style: TextStyle(
                             fontSize: 15,
-                            color: Colors.black87,
+                            color: Colors.black45,
+                            fontWeight: FontWeight.bold,
                             fontFamily: 'RobotoSlab',
                           ),
                         ),
@@ -197,6 +166,39 @@ class AboutMeFragment extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Widget socialMediaProfile(fileName, url) {
+    return Expanded(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GestureDetector(
+                onTap: () => {_launchURL(url)},
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Image.asset(
+                    "images/socialmedia/" +
+                        fileName, // On click should redirect to an URL
+                    width: 40,
+                    height: 40,
+                  ),
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+  _launchURL(url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override

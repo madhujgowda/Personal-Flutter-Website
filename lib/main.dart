@@ -137,7 +137,7 @@ class HomePageState extends State<HomePage> {
           ),
           menuItemList(Icons.person, 'About Me', 1),
           menuItemList(Icons.work, 'Work Experience', 2),
-          menuItemList(Icons.work, 'Business', 3),
+          menuItemList(Icons.monetization_on, 'Business', 3),
           menuItemList(Icons.developer_board, 'Projects', 4),
           menuItemList(Icons.collections_bookmark, 'Certificates', 5),
           menuItemList(Icons.directions_run, 'Extra Curriculars', 6),

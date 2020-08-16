@@ -240,7 +240,7 @@ class AboutMeFragment extends StatelessWidget {
             ),
             Card(
               margin: const EdgeInsets.only(
-                  left: 20, right: 20, top: 20, bottom: 10),
+                  left: 20, right: 20, top: 10, bottom: 10),
               child: Container(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
@@ -351,7 +351,7 @@ class AboutMeFragment extends StatelessWidget {
             ),
             Card(
               margin: const EdgeInsets.only(
-                  left: 20, right: 20, top: 20, bottom: 10),
+                  left: 20, right: 20, top: 10, bottom: 10),
               child: Container(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
@@ -383,7 +383,7 @@ class AboutMeFragment extends StatelessWidget {
             ),
             Card(
               margin: const EdgeInsets.only(
-                  left: 20, right: 20, top: 20, bottom: 10),
+                  left: 20, right: 20, top: 10, bottom: 10),
               child: Container(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(

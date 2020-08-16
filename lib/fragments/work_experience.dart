@@ -31,8 +31,8 @@ class WorkExperienceFragment extends StatelessWidget {
     );
   }
 
-  Widget workExperienceCard(
-      jobTitle, companyName, location, jobDescription, startDate, endDate, topPadding, leftPadding) {
+  Widget workExperienceCard(jobTitle, companyName, location, jobDescription,
+      startDate, endDate, topPadding, leftPadding) {
     return Column(
       children: [
         Row(
@@ -127,6 +127,33 @@ class WorkExperienceFragment extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
+                          location,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black45,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'RobotoSlab',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              child: Flexible(
+                child: Container(
+                  padding: EdgeInsets.only(top: 10, left: leftPadding),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: [
+                        Text(
                           jobDescription,
                           style: TextStyle(
                             fontSize: 15,
@@ -154,121 +181,99 @@ class WorkExperienceFragment extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth < 450) {
+              if (constraints.maxWidth > 450) {
                 return Column(
                   children: [
                     Container(
-                      child: Card(
-                        margin: const EdgeInsets.only(
-                            left: 20, right: 20, top: 20, bottom: 10),
-                        child: Container(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              workExperienceCard(
-                                  "Software Developer",
-                                  "Klokwork Shop Management",
-                                  "Syracuse, NY",
-                                  "* Implemented Stripe Payment, ACH Bank payment, affiliate program, and invoicing. \n* Optimized the backend code and database queries. Enhanced the user experience \n* Developed REST APIs and other various features on Web application designed on MVC pattern using CakePHP and Android App using Kotlin required for the Auto Shop management.",
-                                  "Sep 2019",
-                                  "Present", 0, 0),
-                            ],
-                          ),
-                        ),
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        children: [
+                          Container(
+                            child: Column(
+                              children: [
+                                cardHeader("Work Experience", Icons.work),
+                              ],
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                    Container(
-                      child: Card(
-                        margin: const EdgeInsets.only(
-                            left: 20, right: 20, top: 20, bottom: 10),
-                        child: Container(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              workExperienceCard(
-                                  "Software Developer",
-                                  "Promptous",
-                                  "Syracuse, NY",
-                                  "* Designing and Implementing a HIPAA compliant web application built using Angular and Spring Boot on the IBM cloud. \n* Implemented business logic for the application in Agile Methodology.",
-                                  "Jul 2019",
-                                  "Present", 0, 0),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Card(
-                        margin: const EdgeInsets.only(
-                            left: 20, right: 20, top: 20, bottom: 10),
-                        child: Container(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              workExperienceCard(
-                                  "Android Facilitator (Student Program)",
-                                  "Google",
-                                  "Bengaluru, India",
-                                  "* Cover concepts from Computer Science & Android Development \n* Helping students to complete the units by troubleshooting bugs. \n* Organizing the logistics of running the program and promoting the program to find students.",
-                                  "May 2016",
-                                  "Jun 2017", 0, 0),
-                            ],
-                          ),
-                        ),
-                      ),
-                    )
                   ],
                 );
               } else {
-                return Card(
-                  margin: const EdgeInsets.only(
-                      left: 20, right: 20, top: 20, bottom: 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: [
-                        Container(
-                          child: Column(
-                            children: [
-                              cardHeader("Work Experience", Icons.work),
-                              Container(
-                                child: Column(
-                                  children: [
-                                    workExperienceCard(
-                                        "Software Developer",
-                                        "Klokwork Shop Management",
-                                        "Syracuse, NY",
-                                        "* Implemented Stripe Payment, ACH Bank payment, affiliate program, and invoicing. \n* Optimized the backend code and database queries. Enhanced the user experience \n* Developed REST APIs and other various features on Web application designed on MVC pattern using CakePHP and Android App using Kotlin required for the Auto Shop management.",
-                                        "Sep 2019",
-                                        "Present", 10, 32),
-                                    Divider(color: Colors.black45),
-                                    workExperienceCard(
-                                        "Software Developer",
-                                        "Promptous",
-                                        "Syracuse, NY",
-                                        "* Designing and Implementing a HIPAA compliant web application built using Angular and Spring Boot on the IBM cloud. \n* Implemented business logic for the application in Agile Methodology.",
-                                        "Jul 2019",
-                                        "Present", 10, 32),
-                                    Divider(color: Colors.black45),
-                                    workExperienceCard(
-                                        "Android Facilitator (Student Program)",
-                                        "Google",
-                                        "Bengaluru, India",
-                                        "* Cover concepts from Computer Science & Android Development \n* Helping students to complete the units by troubleshooting bugs. \n* Organizing the logistics of running the program and promoting the program to find students.",
-                                        "May 2016",
-                                        "Jun 2017", 10, 32),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                return Column(
+                  children: [
+
+                  ],
                 );
               }
             }),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      workExperienceCard(
+                          "Software Developer",
+                          "DeftSync LLC",
+                          "Syracuse, NY",
+                          "* Implemented Stripe Payment, ACH Bank payment, affiliate program, and invoicing. \n* Optimized the backend code and database queries. Enhanced the user experience \n* Developed REST APIs and other various features on Web application designed on MVC pattern using CakePHP and Android App using Kotlin required for the Auto Shop management.",
+                          "Sep 2019",
+                          "Present",
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      workExperienceCard(
+                          "Software Developer",
+                          "Promptous",
+                          "Syracuse, NY",
+                          "* Designing and Implementing a HIPAA compliant web application built using Angular and Spring Boot on the IBM cloud. \n* Implemented business logic for the application in Agile Methodology.",
+                          "Jul 2019",
+                          "Present",
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      workExperienceCard(
+                          "Android Facilitator (Student Program)",
+                          "Google",
+                          "Bengaluru, India",
+                          "* Cover concepts from Computer Science & Android Development \n* Helping students to complete the units by troubleshooting bugs. \n* Organizing the logistics of running the program and promoting the program to find students.",
+                          "May 2016",
+                          "Jun 2017",
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

@@ -207,11 +207,11 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Website for Efficient Information Management Using Data Integration System",
-                          "Developed a website with various features through which the students, faculties and admin of the university can access important information with ease through a user-friendly web application. ",
+                          "Smart Irrigation Monitoring System using Android App",
+                          "This project was done in IEEE SS12 International Project Competition & Maker Fair 2017, it is an IoT project where temperature, humidity, and soil moisture can be viewed in real-time from an Android App and user can control the water pump from the distance area. ",
                           "",
-                          "Apr 2018",
-                          "Jun 2018",
+                          "Sep 2017",
+                          "Sep 2017",
                           Colors.red[800],
                           0,
                           0),

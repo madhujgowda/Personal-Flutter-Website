@@ -254,7 +254,7 @@ class AboutMeFragment extends StatelessWidget {
                               skillHeader("Front End"),
                               skillBody("Angular, Flutter, Bootstrap"),
                               skillHeader("Back End"),
-                              skillBody("CakePHP, Spring Boot, Node.js"),
+                              skillBody("Spring, Hibernate, CakePHP, Node.js"),
                               skillHeader("Mobile"),
                               skillBody("Android"),
                               skillHeader("Database"),
@@ -287,8 +287,7 @@ class AboutMeFragment extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           skillHeader("Back End"),
-                                          skillBody(
-                                              "CakePHP, Spring Boot, Node.js"),
+                                          skillBody("Spring, Hibernate, CakePHP, Node.js"),
                                         ],
                                       ),
                                     ),

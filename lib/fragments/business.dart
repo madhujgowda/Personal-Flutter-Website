@@ -186,7 +186,7 @@ class BusinessFragment extends StatelessWidget {
                       businessCard(
                           "Soft Mach Techno Pvt LTD",
                           "Bengaluru, India",
-                          "Aug 2020",
+                          "Oct 2020",
                           "Present",
                           0,
                           0),

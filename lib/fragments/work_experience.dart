@@ -242,7 +242,7 @@ class WorkExperienceFragment extends StatelessWidget {
                           "Software Developer",
                           "Promptous",
                           "Syracuse, NY",
-                          "* Designing and Implementing a HIPAA compliant web application built using Angular and Spring Boot on the IBM cloud. \n* Implemented business logic for the application in Agile Methodology.",
+                          "* Designing and Implementing a HIPAA compliant web application built using Angular, Spring and Hibernate on the IBM cloud. \n* Implemented business logic for the application in Agile Methodology.",
                           "Jul 2019",
                           "Present",
                           0,

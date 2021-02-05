@@ -219,6 +219,50 @@ class ProjectsFragment extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      projectCard(
+                          "Android App - ‘IRTEICT 2017’",
+                          "Solved the problems for the authors to register for the conference and to notify the important conference dates to the user using Firebase Cloud Messaging. Used Spring REST for the backend.",
+                          "",
+                          "May 2017",
+                          "May 2017",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      projectCard(
+                          "Android App - ‘Kalaavaibhava 2k16’ -",
+                          "Developed the interactive app to facilitate the students to browse about the events and respective winners for the college fest.",
+                          "",
+                          "Mar 2016",
+                          "Mar 2016",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),

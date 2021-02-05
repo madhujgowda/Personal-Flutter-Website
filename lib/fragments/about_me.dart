@@ -252,18 +252,16 @@ class AboutMeFragment extends StatelessWidget {
                           child: Column(
                             children: [
                               skillHeader("Front End"),
-                              skillBody("Angular, Flutter, Bootstrap"),
+                              skillBody("Angular, Flutter, jQuery, Bootstrap"),
                               skillHeader("Back End"),
-                              skillBody("Spring, Hibernate, CakePHP, Node.js"),
+                              skillBody("Spring Boot, Hibernate, CakePHP, Node.js"),
                               skillHeader("Mobile"),
                               skillBody("Android"),
                               skillHeader("Database"),
                               skillBody(
-                                  "MySQL, MS SQL Server, MongoDB, Firebase"),
-                              skillHeader("Build Tools"),
-                              skillBody("Maven, Gradle"),
-                              skillHeader("Version Control"),
-                              skillBody("Git"),
+                                  "MySQL, MS SQL Server, PostgreSQL, MongoDB"),
+                              skillHeader("Other Tools"),
+                              skillBody("Git, Firebase, Jira, Liquibase"),
                             ],
                           ),
                         );
@@ -279,7 +277,7 @@ class AboutMeFragment extends StatelessWidget {
                                         children: [
                                           skillHeader("Front End"),
                                           skillBody(
-                                              "Angular, Flutter, Bootstrap"),
+                                              "Angular, Flutter, jQuery, Bootstrap"),
                                         ],
                                       ),
                                     ),
@@ -287,7 +285,7 @@ class AboutMeFragment extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           skillHeader("Back End"),
-                                          skillBody("Spring, Hibernate, CakePHP, Node.js"),
+                                          skillBody("Spring Boot, Hibernate, CakePHP, Node.js"),
                                         ],
                                       ),
                                     ),
@@ -310,7 +308,7 @@ class AboutMeFragment extends StatelessWidget {
                                         children: [
                                           skillHeader("Database"),
                                           skillBody(
-                                              "MySQL, MS SQL Server, MongoDB, Firebase"),
+                                              "MySQL, MS SQL Server, PostgreSQL, MongoDB"),
                                         ],
                                       ),
                                     ),
@@ -323,16 +321,8 @@ class AboutMeFragment extends StatelessWidget {
                                     Expanded(
                                       child: Column(
                                         children: [
-                                          skillHeader("Build Tools"),
-                                          skillBody("Maven, Gradle"),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        children: [
-                                          skillHeader("Version Control"),
-                                          skillBody("Git"),
+                                          skillHeader("Other Tools"),
+                                          skillBody("Git, Firebase, Jira, Liquibase"),
                                         ],
                                       ),
                                     ),

@@ -189,7 +189,7 @@ class CertificatesFragment extends StatelessWidget {
                           "Certificate of Appreciation for judging the Google India Code to Learn Contest 2016",
                           "Google",
                           "https://drive.google.com/file/d/0B8ZgKQ5SR0nXV1gxN1IxcWZXOGc/view?usp=sharing",
-                          "Nov 2016",
+                          "Nov 2016 ",
                           "",
                           Colors.red[800],
                           0,
@@ -209,7 +209,7 @@ class CertificatesFragment extends StatelessWidget {
                     children: [
                       certificateCard(
                           "Introduction to Flutter Development Using Dart",
-                          "The App Brewery",
+                          "The App Brewery ",
                           "https://drive.google.com/file/d/1QQEkPnBjVkrKisaoS3OSKd2QcKPqcB7e/view?usp=sharing",
                           "Jun 2020",
                           "",
@@ -231,9 +231,31 @@ class CertificatesFragment extends StatelessWidget {
                     children: [
                       certificateCard(
                           "EMC Academic Associate, Cloud Infrastructure and Services",
-                          "EMC",
+                          "Dell Technologies ",
                           "https://drive.google.com/open?id=0B8ZgKQ5SR0nXdWRQZ1RHeFUzaEk",
                           "Sep 2016",
+                          "",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      certificateCard(
+                          "Java Programming Fundamentals",
+                          "Udemy",
+                          "https://www.udemy.com/certificate/UC-e97911bd-e492-414d-900a-c4caa6ff4744/",
+                          "Dec 2020",
                           "",
                           Colors.red[800],
                           0,
@@ -255,7 +277,7 @@ class CertificatesFragment extends StatelessWidget {
                           "Applied CS with Android",
                           "Google",
                           "https://drive.google.com/open?id=0B8ZgKQ5SR0nXV0RvdDBVdHdKN0k",
-                          "Mar 2016",
+                          "Mar 2016 ",
                           "",
                           Colors.red[800],
                           0,

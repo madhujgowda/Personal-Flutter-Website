@@ -42,7 +42,7 @@ class AboutMeFragment extends StatelessWidget {
           child: Align(
             alignment: Alignment.topLeft,
             child: Text(
-              fieldHeader + ":",
+              fieldHeader + ": ",
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.black87,
@@ -66,7 +66,7 @@ class AboutMeFragment extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  fieldBody,
+                  fieldBody + " ",
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black87,
@@ -261,7 +261,7 @@ class AboutMeFragment extends StatelessWidget {
                               skillBody(
                                   "MySQL, MS SQL Server, PostgreSQL, MongoDB"),
                               skillHeader("Other Tools"),
-                              skillBody("Git, Firebase, Jira, Liquibase"),
+                              skillBody("Postman, Git, Firebase, Jira, Liquibase"),
                             ],
                           ),
                         );
@@ -322,7 +322,7 @@ class AboutMeFragment extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           skillHeader("Other Tools"),
-                                          skillBody("Git, Firebase, Jira, Liquibase"),
+                                          skillBody("Postman, Git, Firebase, Jira, Liquibase"),
                                         ],
                                       ),
                                     ),
@@ -350,19 +350,19 @@ class AboutMeFragment extends StatelessWidget {
                       child: Column(
                         children: [
                           educationCard(
-                              "Syracuse University",
-                              "Syracuse, NY",
+                              "Syracuse University ",
+                              "Syracuse, NY ",
                               "Master of Science",
-                              "Computer Science",
-                              "2018",
-                              "2020"),
+                              "Computer Science ",
+                              "2018 ",
+                              "2020 "),
                           educationCard(
-                              "Visvesvaraya Technological University",
-                              "Bengaluru, India",
+                              "Visvesvaraya Technological University ",
+                              "Bengaluru, India ",
                               "Bachelor of Engineering",
-                              "Information Science",
-                              "2013",
-                              "2017"),
+                              "Information Science ",
+                              "2013 ",
+                              "2017 "),
                         ],
                       ),
                     ),

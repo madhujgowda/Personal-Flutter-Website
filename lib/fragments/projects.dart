@@ -163,7 +163,7 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Android App - 'Events & Party'",
+                          "Android App - 'Events & Party' ",
                           "This app was developed as the final project for the course Android Programming where the users will be able to post the events and register for those events by searching them. \nFeatures: Google Sign in for Authentication, Rest APIs, Android Jetpack, Android App Bundles and Firebase",
                           "",
                           "Sep 2018",
@@ -229,7 +229,7 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Android App - ‘IRTEICT 2017’",
+                          "Android App - ‘IRTEICT 2017’ ",
                           "Solved the problems for the authors to register for the conference and to notify the important conference dates to the user using Firebase Cloud Messaging. Used Spring REST for the backend.",
                           "",
                           "May 2017",
@@ -251,7 +251,7 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Android App - ‘Kalaavaibhava 2k16’ -",
+                          "Android App - ‘Kalaavaibhava 2k16’ ",
                           "Developed the interactive app to facilitate the students to browse about the events and respective winners for the college fest.",
                           "",
                           "Mar 2016",

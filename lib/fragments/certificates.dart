@@ -253,7 +253,7 @@ class CertificatesFragment extends StatelessWidget {
                     children: [
                       certificateCard(
                           "Java Programming Fundamentals",
-                          "Udemy",
+                          "Udemy ",
                           "https://www.udemy.com/certificate/UC-e97911bd-e492-414d-900a-c4caa6ff4744/",
                           "Dec 2020",
                           "",

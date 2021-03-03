@@ -215,7 +215,7 @@ class AboutMeFragment extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      "Madhu Jayarama",
+                      "Madhu Jayarama ",
                       style: TextStyle(
                         fontSize: 28,
                         color: Colors.red[800],
@@ -377,7 +377,7 @@ class AboutMeFragment extends StatelessWidget {
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: [
-                    cardHeader("Social Media Profiles", Icons.person),
+                    cardHeader("Social Media Profiles ", Icons.person),
                     LayoutBuilder(builder: (context, constraints) {
                       if (constraints.maxWidth < 500) {
                         return Column(

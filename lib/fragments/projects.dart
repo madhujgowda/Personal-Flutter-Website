@@ -255,7 +255,7 @@ class ProjectsFragment extends StatelessWidget {
                           "Developed the interactive app to facilitate the students to browse about the events and respective winners for the college fest.",
                           "",
                           "Mar 2016",
-                          "Mar 2016",
+                          "Mar 2016 ",
                           Colors.red[800],
                           0,
                           0),

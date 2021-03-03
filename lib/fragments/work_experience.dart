@@ -237,7 +237,7 @@ class WorkExperienceFragment extends StatelessWidget {
                           "Android Facilitator - Student Program",
                           "Google",
                           "Bengaluru, India",
-                          "Google Applied CS with Android program is designed for students who are looking for a project-based learning environment to improve their coding skills.\n* Covered concepts from Data Structures, Algorithms, and Android Development to around 120 students.* Helping them to complete the units by troubleshooting bugs and implement features.\n* Organized the logistics of running the program and promoting the program to increase the reach by 35%.\n* As one of the judging members for ‘Google India Code to Learn Contest 2016’, analyzed the application code and functionalities of around 25 submissions.\n* Attended workshops and design sprints at Google office. ",
+                          "Google Applied CS with Android program is designed for students who are looking for a project-based learning environment to improve their coding skills.\n* Covered concepts from Data Structures, Algorithms, and Android Development to around 120 students.* Helping them to complete the units by troubleshooting bugs and implement features.\n* Organized the logistics of running the program and promoting the program to increase the reach by 35%.\n* As one of the judging members for ‘Google India Code to Learn Contest 2016’, analyzed the application code and functionalities of around 25 submissions.\n* Attended workshops and design sprints at Google office.  ",
                           "May 2016",
                           "Jun 2017",
                           0,

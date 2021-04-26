@@ -260,8 +260,10 @@ class AboutMeFragment extends StatelessWidget {
                               skillHeader("Database"),
                               skillBody(
                                   "MySQL, MS SQL Server, PostgreSQL, MongoDB"),
+                              skillHeader("Cloud"),
+                              skillBody("Microsoft Azure, IBM Cloud, IONOS Cloud"),
                               skillHeader("Other Tools"),
-                              skillBody("Postman, Git, Firebase, Jira, Liquibase"),
+                              skillBody("Docker, Kubernetes, Postman, Git, Firebase, Jira, Liquibase"),
                             ],
                           ),
                         );
@@ -321,8 +323,16 @@ class AboutMeFragment extends StatelessWidget {
                                     Expanded(
                                       child: Column(
                                         children: [
+                                          skillHeader("Cloud"),
+                                          skillBody("Microsoft Azure, IBM Cloud, IONOS Cloud"),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        children: [
                                           skillHeader("Other Tools"),
-                                          skillBody("Postman, Git, Firebase, Jira, Liquibase"),
+                                          skillBody("Docker, Kubernetes, Postman, Git, Firebase, Jira, Liquibase"),
                                         ],
                                       ),
                                     ),

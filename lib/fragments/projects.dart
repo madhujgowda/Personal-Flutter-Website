@@ -163,11 +163,11 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Android App - 'Events & Party' ",
-                          "This app was developed as the final project for the course Android Programming where the users will be able to post the events and register for those events by searching them. \nFeatures: Google Sign in for Authentication, Rest APIs, Android Jetpack, Android App Bundles and Firebase",
+                          "Three Player Tic Tac Toe Game with AI Agent ",
+                          "• Evaluated the utility of each state and fed it to the neural network based on the trained model.\n• Used Min-Max tree search as a tree search algorithm.\n• Used ReLu and Sigmoid as the activation functions for the neural network model. ",
                           "",
-                          "Sep 2018",
-                          "Dec 2018",
+                          "Oct 2019",
+                          "Dec 2019",
                           Colors.red[800],
                           0,
                           0),
@@ -185,11 +185,33 @@ class ProjectsFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       projectCard(
-                          "Website for Efficient Information Management Using Data Integration System",
-                          "Developed a website with various features through which the students, faculties and admin of the university can access important information with ease through a user-friendly web application. ",
+                          "YouTube Video Analyzer ",
+                          "• Created a video scrapper from YouTube API. Used Punctuator2 to preprocess the data.\n• Use of natural language processing, text analysis, computational linguistics to find sentence level analysis and document level analysis.\n• Visualized the working in Express framework connected with MongoDB. ",
                           "",
-                          "Apr 2018",
-                          "Jun 2018",
+                          "Jan 2019",
+                          "Mar 2019",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      projectCard(
+                          "Android App - 'Events & Party' ",
+                          "• This app was developed as the final project for the course Android Programming where the users will be able to post the events and register for those events by searching them.\n• Tech: Spring Boot, Hibernate, Google Sign in for Authentication, Rest APIs, Android Jetpack, Android App Bundles and Firebase ",
+                          "",
+                          "Sep 2018",
+                          "Dec 2018",
                           Colors.red[800],
                           0,
                           0),
@@ -212,6 +234,28 @@ class ProjectsFragment extends StatelessWidget {
                           "",
                           "Sep 2017",
                           "Sep 2017",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      projectCard(
+                          "Website for Efficient Information Management Using Data Integration System",
+                          "Developed a web app using REST APIs using Spring Boot for the students, faculties and admin of the university can access important information with ease through a user-friendly Bootstrap ",
+                          "",
+                          "Apr 2018",
+                          "Jun 2018",
                           Colors.red[800],
                           0,
                           0),

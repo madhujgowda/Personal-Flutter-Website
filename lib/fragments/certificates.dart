@@ -208,10 +208,10 @@ class CertificatesFragment extends StatelessWidget {
                   child: Column(
                     children: [
                       certificateCard(
-                          "Introduction to Flutter Development Using Dart",
-                          "The App Brewery ",
-                          "https://drive.google.com/file/d/1QQEkPnBjVkrKisaoS3OSKd2QcKPqcB7e/view?usp=sharing",
-                          "Jun 2020",
+                          "Certification on Algorithmic Toolbox by UC San Diego ",
+                          "Coursera ",
+                          "https://www.coursera.org/account/accomplishments/verify/XZ3S426B4QT8",
+                          "Mar 2021 ",
                           "",
                           Colors.red[800],
                           0,
@@ -234,6 +234,28 @@ class CertificatesFragment extends StatelessWidget {
                           "Dell Technologies ",
                           "https://drive.google.com/open?id=0B8ZgKQ5SR0nXdWRQZ1RHeFUzaEk",
                           "Sep 2016",
+                          "",
+                          Colors.red[800],
+                          0,
+                          0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: Card(
+                margin: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 10),
+                child: Container(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      certificateCard(
+                          "Introduction to Flutter Development Using Dart",
+                          "The App Brewery ",
+                          "https://drive.google.com/file/d/1QQEkPnBjVkrKisaoS3OSKd2QcKPqcB7e/view?usp=sharing",
+                          "Jun 2020",
                           "",
                           Colors.red[800],
                           0,

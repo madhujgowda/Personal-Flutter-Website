@@ -263,7 +263,7 @@ class AboutMeFragment extends StatelessWidget {
                               skillHeader("Cloud"),
                               skillBody("AWS, Google Cloud, Microsoft Azure, IBM Cloud, IONOS Cloud"),
                               skillHeader("Other Tools"),
-                              skillBody("OpenShift, Docker, Kubernetes, Postman, Git, Firebase, Jira, Liquibase"),
+                              skillBody("Docker, Kubernetes, Postman, Git, Firebase, Jira, Liquibase"),
                             ],
                           ),
                         );

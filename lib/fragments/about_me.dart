@@ -261,7 +261,7 @@ class AboutMeFragment extends StatelessWidget {
                               skillBody(
                                   "MySQL, MS SQL Server, PostgreSQL, MongoDB"),
                               skillHeader("Cloud"),
-                              skillBody("Microsoft Azure, IBM Cloud, IONOS Cloud"),
+                              skillBody("AWS, Google Cloud, Microsoft Azure, IBM Cloud, IONOS Cloud"),
                               skillHeader("Other Tools"),
                               skillBody("Docker, Kubernetes, Postman, Git, Firebase, Jira, Liquibase"),
                             ],
